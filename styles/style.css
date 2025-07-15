@@ -10,7 +10,36 @@
 
 */
 
+.responsive-block {
+  width: var(--block-width);
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: 'wght' var(--card-main-weight);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header {
+  margin: 100px auto 98px;
+  background-color: #fff;
+  font-family: var(--accent-font);
+  text-align: center;
+  padding: var(--header-padding-block) var(--header-padding-inline);
+}
+
+.title {
+  font-size: var(--header-fs);
+}
+
+.subtitle{
+  font-size: var(--subheader-fs);
+  margin-block-start: 20px;
 }
