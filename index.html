@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicons/favicon.ico" type="image/x-icon" sizes="any">
-    <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="./favicons/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+    <link rel="icon" href="./favicons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicons/apple-touch-icon.png"
+    />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -14,11 +23,48 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header responsive-block  ">
+    <header class="header responsive-block">
       <h1 class="title">&lt;/HTML&gt;</h1>
       <p class="subtitle">закрывающий тег</p>
     </header>
-    <main></main>
+    <main class="main">
+      <section class="cards">
+        <ul class="card__list">
+          <li class="card__list-item">
+            <article class="card responsive-block">
+              <h3 class="card__title">
+                Фритрек и нулевой спринт: Подготовка к работе
+              </h3>
+              <img
+                src="./images/truck.png"
+                alt="Грузовик под ночным небом"
+                class="card__image"
+              />
+              <div class="card__description">
+              <p class="card__text">
+                Это было самое начало пути. На этом этапе важно было
+                проникнуться основами и настроиться на учёбу. И, возможно,
+                подумать, как новые знания могут повлиять на ваше будущее.
+              </p>
+              <small class="card__note"
+                >Место для ваших воспоминаний о начале обучения.</small
+              >
+              <span class="button__text">
+              <button type="button" class="card__like-button"><img 
+                    src="./svg/heart animation white.svg" 
+                    class="card__like-icon" 
+                    width="39" 
+                    height="36" 
+                    alt=""
+                  ><span class="like">Like</span>
+              </button>
+              </span>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

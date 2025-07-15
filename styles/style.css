@@ -25,6 +25,7 @@
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
+  font-size: 18px;
 }
 
 .header {
@@ -42,4 +43,42 @@
 .subtitle{
   font-size: var(--subheader-fs);
   margin-block-start: 20px;
+}
+
+
+.card__like-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+
+.button__text{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.like {
+  border: 1px solid #000;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  padding: 12.5px 37px;
+}
+
+.card {
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.card__title {
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--card-header-weight);
+}
+
+.card__description {
+  display: grid;
+  grid-template-rows: 1fr 1em 1fr;
+  gap: 25px;
+  padding: 25px;
 }
