@@ -1,0 +1,59 @@
+.victory-glow {
+  filter: brightness(120%) saturate(240%) contrast(110%);
+}
+
+.memory-bleach {
+  filter: 
+    sepia(80%) 
+    contrast(85%) 
+    brightness(105%) 
+    grayscale(20%);
+}
+
+.matrix {
+  filter: 
+    hue-rotate(90deg) 
+    saturate(400%) 
+    brightness(110%) 
+    sepia(30%);
+}
+
+.debug-nightmare {
+  filter: 
+    hue-rotate(250deg) 
+    saturate(300%) 
+    brightness(90%) 
+    contrast(150%);
+}
+
+.vintage-bug {
+  filter: 
+    grayscale(40%) 
+    contrast(200%) 
+    brightness(120%) 
+    opacity(90%);
+}
+
+.neon-breakthrough {
+  filter: 
+    invert(85%) 
+    hue-rotate(180deg) 
+    saturate(200%) 
+    contrast(80%);
+}
+
+.zen-code {
+  filter: 
+    blur(5px) 
+    brightness(110%) 
+    saturate(180%) 
+    hue-rotate(-10deg);
+}
+
+.focus-mode {
+  filter: 
+    grayscale(100%) 
+    contrast(250%) 
+    brightness(95%) 
+    opacity(95%);
+}

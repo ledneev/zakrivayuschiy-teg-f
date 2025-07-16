@@ -32,4 +32,5 @@
         #e7e7e7 0.01%,
         #1a1a1a 100%
       );
+  --label-stroke-color: rgba(255, 255, 255, 0.8);
 }

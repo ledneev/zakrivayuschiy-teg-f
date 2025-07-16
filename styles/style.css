@@ -15,25 +15,25 @@
 }
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-font);
-  font-variation-settings: 'wght' var(--card-main-weight);
-  background-image: var(--background-gradient);
-  background-attachment: fixed;
-  background-size: cover;
   min-height: 100vh;
+  font-family: var(--main-font);
+  font-size: 18px;
+  background-image: var(--background-gradient);
   background-repeat: no-repeat;
   background-position: center center;
-  font-size: 18px;
+  background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--card-main-weight);
 }
 
 .header {
   margin: 100px auto 98px;
-  background-color: #fff;
+  padding: var(--header-padding-block) var(--header-padding-inline);
   font-family: var(--accent-font);
   text-align: center;
-  padding: var(--header-padding-block) var(--header-padding-inline);
+  background-color: #fff;
 }
 
 .title {
@@ -41,44 +41,94 @@
 }
 
 .subtitle{
-  font-size: var(--subheader-fs);
   margin-block-start: 20px;
+  font-size: var(--subheader-fs);
+  text-transform: uppercase;
 }
 
-
-.card__like-button {
-  background-color: transparent;
-  border: none;
+.cards {
   display: flex;
-}
-
-.button__text{
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: end;
-}
-
-.like {
-  border: 1px solid #000;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  line-height: 0.9;
-  padding: 12.5px 37px;
 }
 
 .card {
+  margin-bottom: 50px;
   background-color: #fff;
-  margin: 0 auto;
 }
 
 .card__title {
   font-size: 18px;
   font-variation-settings: 'wght' var(--card-header-weight);
+  padding: 4px 10px;
+  border: 2px solid black;
+}
+
+.label__container {
+  position: relative;
+  width: 100%;
+  height: var(--block-width);
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  /* фоллбэк */
+  text-shadow: 
+    -1px -1px 0 var(--label-stroke-color),
+    1px -1px 0 var(--label-stroke-color),
+    -1px 1px 0 var(--label-stroke-color),
+    1px 1px 0 var(--label-stroke-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or 
+          (text-stroke: 1px var(--label-stroke-color)) {
+  .label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+  }
+}
+
+.card__image{
+  inline-size: 100%;
+  border: 2px solid black;
+  height: var(--block-width);
 }
 
 .card__description {
   display: grid;
-  grid-template-rows: 1fr 1em 1fr;
+  grid-template-rows: 1fr 1em min-content;
   gap: 25px;
   padding: 25px;
 }
+
+.card__like-button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  justify-content: end;
+  align-items: center;
+}
+
+.button__text{
+  border: 1px solid #000;
+  padding: 12.5px 37px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.save__dialog {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.save__dialog .button__text {
+  border: none;
+}
+
