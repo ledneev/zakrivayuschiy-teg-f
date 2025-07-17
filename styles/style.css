@@ -16,7 +16,7 @@
 
 .page {
   min-height: 100vh;
-  font-family: var(--main-font);
+  font-family: var(--main-font, "Inter", "Segoe UI", sans-serif);
   font-size: 18px;
   background-image: var(--background-gradient);
   background-repeat: no-repeat;
@@ -25,13 +25,19 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--card-main-weight);
+  font-variation-settings: "wght" var(--card-main-weight);
 }
 
 .header {
   margin: 100px auto 98px;
   padding: var(--header-padding-block) var(--header-padding-inline);
-  font-family: var(--accent-font);
+  font-family: var(
+    --accent-font,
+    "PressStart2P",
+    "Courier New",
+    Courier,
+    monospace
+  );
   text-align: center;
   background-color: #fff;
 }
@@ -40,7 +46,7 @@
   font-size: var(--header-fs);
 }
 
-.subtitle{
+.subtitle {
   margin-block-start: 20px;
   font-size: var(--subheader-fs);
   text-transform: uppercase;
@@ -58,10 +64,10 @@
 }
 
 .card__title {
-  font-size: 18px;
-  font-variation-settings: 'wght' var(--card-header-weight);
-  padding: 4px 10px;
   border: 2px solid black;
+  padding: 4px 10px;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--card-header-weight);
 }
 
 .label__container {
@@ -77,16 +83,14 @@
   font-family: var(--accent-font);
   font-size: 14px;
   /* фоллбэк */
-  text-shadow: 
-    -1px -1px 0 var(--label-stroke-color),
-    1px -1px 0 var(--label-stroke-color),
-    -1px 1px 0 var(--label-stroke-color),
+  text-shadow: -1px -1px 0 var(--label-stroke-color),
+    1px -1px 0 var(--label-stroke-color), -1px 1px 0 var(--label-stroke-color),
     1px 1px 0 var(--label-stroke-color);
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or 
-          (text-stroke: 1px var(--label-stroke-color)) {
+@supports (-webkit-text-stroke: 1px var(--label-stroke-color)) or
+  (text-stroke: 1px var(--label-stroke-color)) {
   .label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--label-stroke-color);
@@ -94,41 +98,148 @@
   }
 }
 
-.card__image{
-  inline-size: 100%;
-  border: 2px solid black;
+.card__image {
   height: var(--block-width);
+  border: 2px solid black;
+  inline-size: 100%;
+}
+
+.button {
+  background-color: var(--main-color, #fff);
 }
 
 .card__description {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1em min-content;
-  gap: 25px;
+  row-gap: 25px;
+  border: 2px solid #000;
+  border-top: none;
   padding: 25px;
 }
 
 .card__like-button {
-  display: flex;
+  grid-column-start: 5;
+  justify-self: end;
+  margin-inline-end: 8px;
   border: none;
+  padding: 0;
   background-color: transparent;
-  justify-content: end;
-  align-items: center;
+  block-size: 36px;
+  inline-size: 36px;
+  
 }
 
-.button__text{
-  border: 1px solid #000;
+.card__like-icon {
+  width: 40px;
+  height: 36px;
+  border: 2px solid transparent;
+  
+}
+
+.card__text-button {
+  position: relative;
+  z-index: 1;
+  background-color: var(--main-color, #fff);
+  transition: box-shadow 0.3s ease;
+  padding: 0;
+}
+
+.card__text,
+.card__note {
+  grid-column: span 6;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
   padding: 12.5px 37px;
-  font-family: var(--accent-font);
+  color: #fff;
+  font-family: var(
+    --accent-font,
+    "PressStart2P",
+    "Courier New",
+    Courier,
+    monospace
+  );
   font-size: 14px;
   line-height: 0.9;
+  mix-blend-mode: difference;
+}
+
+.card__like-button .button__text {
+  border: 1px solid #000;
 }
 
 .save__dialog {
-  margin: 0 auto;
-  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-block-end: 100px;
+  padding: 13px 20px;
 }
 
 .save__dialog .button__text {
-  border: none;
+  margin-inline-start: 8px;
+  padding: 0;
+  line-height: 0.9;
 }
 
+.button__icon {
+  position: relative;
+  z-index: 2;
+  color: var(--main-color, #fff);
+  block-size: 21px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+
+.modal {
+  border: 2px solid var(--text-color, #000000);
+  padding: 25px 30px;
+  overflow: hidden;
+  font-family: var(
+    --accent-font,
+    "PressStart2P",
+    "Courier New",
+    Courier,
+    monospace
+  );
+  line-height: 1.5;
+  text-transform: uppercase;
+  max-inline-size: 355px;
+}
+
+.modal[open] {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+
+.modal::backdrop {
+  opacity: 0.8;
+  background-color: #000;
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.modal__button {
+  position: relative;
+  padding: 8px 130px;
+  line-height: 0.9;
+  background-color: #fff;
+  inline-size: 100%;
+}
+
+.modal__button .button__text {
+  padding: 0;
+}

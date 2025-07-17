@@ -1,0 +1,32 @@
+.button:focus {
+  outline: none;
+  
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: var(--accent-color, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+.card__like-button {
+  outline: none;
+}
+
+.card__like-button:focus-visible .card__like-icon{
+  border-color: var(--accent-color, #000)
+} 

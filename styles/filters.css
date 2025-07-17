@@ -1,7 +1,3 @@
-.victory-glow {
-  filter: brightness(120%) saturate(240%) contrast(110%);
-}
-
 .memory-bleach {
   filter: 
     sepia(80%) 

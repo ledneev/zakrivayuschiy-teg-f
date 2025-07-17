@@ -4,7 +4,7 @@
   --accent-font: 'Press Start 2P', 'Courier New', Courier, monospace;
   --card-header-weight: 715;
   --card-main-weight: 410;
-  --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);;
+  --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --header-fs: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --subheader-fs: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --header-padding-block: clamp(7.625rem, 6.5rem + 4.8vw, 8.125rem);
@@ -33,4 +33,6 @@
         #1a1a1a 100%
       );
   --label-stroke-color: rgba(255, 255, 255, 0.8);
+  --main-color: #fff;
+  --accent-color: #000;
 }
