@@ -111,7 +111,7 @@
 .card__description {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1em min-content;
+  grid-template-rows: 1fr min-content min-content;
   row-gap: 25px;
   border: 2px solid #000;
   border-top: none;
@@ -127,14 +127,12 @@
   background-color: transparent;
   block-size: 36px;
   inline-size: 36px;
-  
 }
 
-.card__like-icon {
+.like-icon {
   width: 40px;
   height: 36px;
   border: 2px solid transparent;
-  
 }
 
 .card__text-button {
@@ -143,6 +141,10 @@
   background-color: var(--main-color, #fff);
   transition: box-shadow 0.3s ease;
   padding: 0;
+}
+
+.card__note {
+  /* grid-row: span 2; */
 }
 
 .card__text,
@@ -194,7 +196,7 @@
 }
 
 .modal {
-  border: 2px solid var(--text-color, #000000);
+  border: 2px solid var(--text-color, #000);
   padding: 25px 30px;
   overflow: hidden;
   font-family: var(
@@ -217,7 +219,7 @@
 
 .modal::backdrop {
   opacity: 0.8;
-  background-color: #000;
+  background-color: var(--accent-color, #000);
 }
 
 .modal__content {
@@ -236,7 +238,7 @@
   position: relative;
   padding: 8px 130px;
   line-height: 0.9;
-  background-color: #fff;
+  background-color: var(--main-color, #fff);
   inline-size: 100%;
 }
 

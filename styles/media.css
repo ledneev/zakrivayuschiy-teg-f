@@ -1,0 +1,17 @@
+@media (width < 400px) {
+  .header {
+    margin: 100px auto 100px;
+  }
+
+  .save__dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+    margin-block-end: 8px;
+  }
+}
