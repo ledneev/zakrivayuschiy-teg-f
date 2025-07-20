@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --main-font: "Inter", "Segoe UI", sans-serif;
-  --accent-font: "Press Start 2P", "Courier New", Courier, monospace;
+  --accent-font: "Press Start 2P", fantasy;
   --card-header-weight: 715;
   --card-main-weight: 410;
   --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
