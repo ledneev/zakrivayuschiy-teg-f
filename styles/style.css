@@ -49,7 +49,7 @@
 }
 
 .header {
-  margin: 100px auto 96px;
+  margin: 100px auto 95px;
   border: 2px solid var(--accent-color, #000);
   padding: var(
       --header-padding-block,
@@ -84,12 +84,12 @@
 }
 
 .card {
-  margin-bottom: 50px;
+  margin-bottom: 52px;
+  border: 2px solid var(--accent-color, #000000);
   background-color: #fff;
 }
 
 .card__title {
-  border: 2px solid black;
   padding: 4px 10px;
   font-size: 18px;
   font-variation-settings: "wght" var(--card-header-weight, 715);
@@ -102,7 +102,8 @@
     --block-width,
     clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem)
   );
-  border: 2px solid black;
+  border-block-start: 2px solid var(--accent-color, #000000);
+  border-block-end: 2px solid var(--accent-color, #000000);
 }
 
 .label {
@@ -139,6 +140,7 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
+  max-block-size: 100%;
 }
 
 .card__description {
@@ -146,9 +148,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr min-content min-content;
   row-gap: 25px;
-  border: 2px solid #000;
-  border-top: none;
-  padding: 25px;
+  padding: 25px 25px 25px;
 }
 
 .card__text {
@@ -189,7 +189,7 @@
 
 .like-icon {
   width: 40px;
-  height: 36px;
+  height: 37px;
   border: 2px solid transparent;
   transition: border-color 0.4s ease;
 }
@@ -197,7 +197,7 @@
 .card__text-button {
   position: relative;
   z-index: 1;
-  padding: 6px 35px;
+  padding: 8px 35px 4px 36px;
   background-color: var(--main-color, #fff);
   transition: box-shadow 0.3s ease;
 }
@@ -210,11 +210,10 @@
   position: relative;
   z-index: 2;
   margin-block-end: 100px;
-  padding: 13px 20px;
+  padding: 12px 19px;
 }
 
 .save__dialog .button__text {
-  margin-inline-start: 8px;
   padding: 0;
   line-height: 0.9;
 }
@@ -230,17 +229,17 @@
 
 .modal {
   border: 2px solid var(--text-color, #000);
+  padding: 25px 30px;
   font-family: var(--accent-font, "PressStart2P", fantasy);
   line-height: 1.5;
   text-transform: uppercase;
-  max-inline-size: 355px;
+  max-inline-size: 353px;
 }
 
 .modal[open] {
   display: grid;
   grid-template-rows: repeat(2, min-content);
   gap: 30px;
-  padding: 30px 28px;
 }
 
 .modal::backdrop {
