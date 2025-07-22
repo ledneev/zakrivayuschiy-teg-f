@@ -229,7 +229,7 @@
 
 .modal {
   border: 2px solid var(--text-color, #000);
-  padding: 25px 28px; 
+  padding: 25px 28px;
   font-family: var(--accent-font, "PressStart2P", fantasy);
   line-height: 1.5;
   text-transform: uppercase;
