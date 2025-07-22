@@ -11,19 +11,22 @@
   }
 
   .button__icon {
+    margin-block-end: 8px;
     block-size: 28px;
     inline-size: 28px;
-    margin-block-end: 8px;
   }
 
   .modal {
-  padding: 28px 34px 28px 40px;
+    padding: 28px 34px 26px 40px;
     max-inline-size: 339px;
-}
-  .modal__button {
-  
-  padding: 10px 114.5px;
-  
-}
-}
+  }
 
+  .modal__content {
+    padding: 0;
+    gap: 16px;
+  }
+
+  .modal__button {
+    padding: 9px 0;
+  }
+}
